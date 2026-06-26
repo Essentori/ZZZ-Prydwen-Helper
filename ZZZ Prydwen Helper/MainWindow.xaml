@@ -1,0 +1,28 @@
+﻿<Window x:Class="ZZZ_Prydwen_Helper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZZZ_Prydwen_Helper"
+        mc:Ignorable="d"
+        Title="ZZZ Prydwen Helper" 
+        Height="450" Width="500" ResizeMode="NoResize" 
+        FontFamily="./Resources/Fonts/#anuphan regular 400" 
+        Background="#FF23242A">
+    <Grid>
+        <StackPanel DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}}">
+            <Button Content="{Binding ViewModel.ButtonContent}" IsEnabled="{Binding ViewModel.ButtonEnabled}" Click="InitializeButton_Click"/>
+
+            <ComboBox ItemsSource="{Binding ViewModel.Characters}"
+              SelectedItem="{Binding ViewModel.SelectedCharacter}"
+              DisplayMemberPath="Name"
+              IsEnabled="{Binding ViewModel.IsDropdownEnabled}"/>
+
+            <TextBlock 
+                Text="{Binding ViewModel.CharacterInfoText}" 
+                Height="300" 
+                FontSize="24" 
+                TextAlignment="Center" Foreground="White" />
+        </StackPanel>
+    </Grid>
+</Window>
