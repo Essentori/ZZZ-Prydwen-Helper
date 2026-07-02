@@ -1,3 +1,5 @@
+Please dont be here and leave now, this project is in deep WIP state!
+
 # ZZZ Prydwen Helper
 
 Desktop application built on WPF (Windows only) for **Zenless Zone Zero** that synchronizes data with <a href="https://www.prydwen.gg/zenless">**Prydwen.gg**</a> to help you build your agents efficiently.
